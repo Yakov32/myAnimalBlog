@@ -3,7 +3,7 @@
         protected $db;
         
         public function __construct(){
-            if(!empty($this->$db)){
+            if(empty($this->$db)){
                 $this->db = DB::connectToDB();
             }
         }

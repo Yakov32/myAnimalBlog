@@ -270,9 +270,8 @@ header .header__login .login__item a:hover {
   font-size: 14px;
 }
 
-.login-page .form button {
-  font-size: 20px;
-  font-family: "Kalam";
+.login-page .form input.form_submit {
+  font-size: 22px;
   text-transform: uppercase;
   outline: 1;
   background: #5997DD;
@@ -283,6 +282,16 @@ header .header__login .login__item a:hover {
   margin: 10px 0px;
   color: #F5C01E;
   cursor: pointer;
+}
+
+.login-page .form input.form_submit:hover {
+  color: #d4a91e;
+}
+
+.login-page .form .reg_errorMessage {
+  font-size: 19px;
+  color: red;
+  font-weight: bold;
 }
 
 .login-page .form .message {

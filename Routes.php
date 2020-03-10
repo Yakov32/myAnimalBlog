@@ -4,6 +4,8 @@
 
 	$routes['index.php'] = 'IndexController';
 
-	$routes['login'] = 'loginController';
+	$routes['login'] = 'LoginController';
+
+	$routes['regist'] = 'RegController';
 
 ?>

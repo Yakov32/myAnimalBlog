@@ -30,23 +30,34 @@
             padding: 15px;
             box-sizing: border-box;
             font-size: 14px;
+
+            &.form_submit{
+                font-size: 22px;
+                text-transform: uppercase;
+                outline: 1;
+                background: #5997DD;
+                width: 100%;
+                border: 0;
+                border-radius: 10px;
+                padding: 12px;
+                margin: 10px 0px;
+                color: #F5C01E;
+                cursor: pointer;
+
+                &:hover{
+                    color:#d4a91e;
+                }
+            }
+        }
+
+        .reg_errorMessage{
+            font-size: 19px;
+            color: red;
+            font-weight: bold;
         }
 
 
-        button{
-            font-size: 20px;
-            font-family:  "Kalam";
-            text-transform: uppercase;
-            outline: 1;
-            background: #5997DD;
-            width: 100%;
-            border: 0;
-            border-radius: 10px;
-            padding: 12px;
-            margin: 10px 0px;
-            color: #F5C01E;
-            cursor: pointer;
-        }
+        
         .message{
             font-size: 18px;
             

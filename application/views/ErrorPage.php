@@ -8,7 +8,7 @@
 <header> <?php require_once "blocks/header.php"; ?></header>
 
 
-<H1>ТАКОЙ СТРАНИЦЫ НЕ СУЩЕСТВУЕТ!</H1>
+<H1>This Page doesn't exist!</H1>
 	
 	
 </body>

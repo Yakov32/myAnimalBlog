@@ -49,9 +49,9 @@
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script src="./public/js/slick.min.js"></script>
+	<script src="./public/js/slider/slick.min.js"></script>
 
-	<script src="./public/js/script.js"></script>
+	<script src="./public/js/slider/script.js"></script>
 
 
 </body>
