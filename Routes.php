@@ -8,4 +8,6 @@
 
 	$routes['regist'] = 'RegController';
 
+	$routes['post'] = 'PostController';
+
 ?>

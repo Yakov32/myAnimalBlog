@@ -1,17 +1,11 @@
 <?php
 
 	class LoginController extends Controller{
-		protected $modelName = 'UserModel';
-		protected $view = 'loginView';
-		protected $pageData = array("title" => "LoginPage");
+		protected $modelName = 'UsersModel';
+		protected $pageData = array("title" => "RegAuth");
 
-
-
-		
-
-
-		
+		public function Index(){
+			$this->View->render('RegAuthView',$this->PageData);
+		}
 	} 
-
-
  ?>

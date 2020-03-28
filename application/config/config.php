@@ -12,9 +12,11 @@ function __autoload($class_name){
 		if(file_exists('./application/models/'.$class_name.'.php')) {
 			require_once './application/models/'.$class_name.'.php';
 			return 1;
-			}
+		}
 
+		if(file_exists('./application/views/'.$class_name.'.php')) {
+			require_once './application/views/'.$class_name.'.php';
+			return 1;
+		}	
 	} 
-
-
  ?>
