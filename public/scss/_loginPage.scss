@@ -19,7 +19,7 @@
             padding-bottom: 28px; 
         }
 
-        input {
+        .formgroup input {
             font-family: "Roboto", sans-serif;
             outline: 1;
             background: white;
@@ -39,8 +39,9 @@
                 width: 100%;
                 border: 0;
                 border-radius: 10px;
-                padding: 12px;
+                padding: 9px;
                 margin: 10px 0px;
+                font-weight: bold;
                 color: #F5C01E;
                 cursor: pointer;
 
