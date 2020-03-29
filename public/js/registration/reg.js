@@ -1,10 +1,17 @@
-$(document).ready( function(){
+$(document).ready( function()
+{
+    let alertMessage = $('.alert-message .alert');
     
-    $('.form-register').on('submit', function( event){
-        let login = $('.form-register .reg_login').val();
-        let pass  = $('.form-register .reg_pass').val();
-        let email = $('.form-register .reg_email').val();
-        let errorMessage = $('.form-register .reg_errorMessage');
+    if(alertMessage.text().length > 25){
+        alertMessage.attr('hidden',false);
+    }
+
+    $('.regBlock .regForm').on('submit', function(event){
+
+        let login = $('.regBlock .regForm #signin-login').val();
+        let pass  = $('.regBlock .regForm #signin-password').val();
+        let email = $('.regBlock .regForm #signin-email').val();
+        let errorMessage = $('.regBlock .regForm .reg_errorMessage');
         
         if(login.length < 6){
             errorMessage.text('Min length of login is 6!');
@@ -21,6 +28,8 @@ $(document).ready( function(){
             errorMessage.text('Uncorrect Email!');
             event.preventDefault();
         }
+        
+        
 
         /*else {
             $.post(

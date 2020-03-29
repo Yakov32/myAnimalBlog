@@ -50,7 +50,7 @@
 		</div>
 	</nav>
 
-	<div id="signInModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+	<div id="signInModal" class="modal fade regBlock" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
 		<div class="modal-dialog modal-sm" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -61,23 +61,23 @@
 				</div>
 				<div class="modal-body">
 					<div class="container-fluid">
-						<form action="regist">
+						<form action="regist?cont_method=reg" method="post" class="regForm">
 							<div class="form-group">
 								<label for="signin-login">Login</label>
-								<input id="signin-login" class="form-control" type="text" placeholder="your login">
+								<input name="regLogin" id="signin-login" class="form-control" type="text" placeholder="your login" required>
 							</div>
 
 							<div class="form-group">
-								<label for="signin-pass">Password</label>
-								<input id="signin-pass" class="form-control" type="password" placeholder="your password">
+								<label for="signin-password">Password</label>
+								<input name="regPassword" id="signin-password" class="form-control" type="password" placeholder="your password" required>
 							</div>
 
 							<div class="form-group">
 								<label for="signin-email">Email</label>
-								<input id="signin-email" class="form-control" type="text" placeholder="your email">
+								<input name="regEmail" id="signin-email" class="form-control" type="text" placeholder="your email" required>
 							</div>
 
-							<p class="errorMessage"></pc>
+							<p class="reg_errorMessage"></p>
 							
 							<button type="submit" class="btn btn-primary">Register</button>
 						</form>
@@ -87,6 +87,3 @@
 			</div>
 		</div>
 	</div>
-
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script src="./public/js/registration/reg.js"></script>

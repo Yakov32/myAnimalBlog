@@ -131,6 +131,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
 }
 
+#signInModal .modal-body form .reg_errorMessage {
+  color: #bf1330;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 #signInModal .modal-body form .btn {
   font-size: 22px;
   text-transform: uppercase;
@@ -146,18 +152,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*Home Page STYLES*/
-#homePageContent {
+.alert-message {
+  position: absolute;
+  z-index: 1;
+  left: 15%;
+}
+
+.alert-message .alert-success {
+  margin-bottom: 0px;
+}
+
+.main-content {
   width: 80%;
   max-width: 80%;
   margin: 0 auto;
-  min-zoom: 1000px;
-  background-color: #D5B7B7;
+  min-height: 850px;
+  background-color: #faf0cf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#homePageContent .leftColumn {
-  background-color: #FCEDC5;
+.main-content .leftColumn {
   width: 78%;
-  min-height: 1000px;
+}
+
+.main-content .RightColumn {
+  width: 22%;
+  background-color: #e8c990;
+  border-top: 1px solid orange;
 }
 
 .clear {
@@ -192,6 +215,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Элемент точки */
 /*HomePage slider----*/
 .slider {
+  position: relative;
+  z-index: 0;
   padding: 0px;
   margin-bottom: 100px;
 }
@@ -234,34 +259,36 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #3A2C05;
 }
 
-.articlesSection {
-  width: 100%;
-  margin-bottom: 100px;
-  background-color: green;
-  clear: both;
+.posts-container .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.articlesSection .article {
+.posts-container .container .card {
+  width: 48.5%;
+  border: 1px solid black;
+}
+
+.posts-container .container .card:nth-child(even) {
+  margin-left: 3%;
+}
+
+.posts-container .container .card img {
+  width: 100%;
+  height: 320px;
+}
+
+.posts-container .container .card .card-body {
+  background-color: #f5f7f7;
+}
+
+.posts-container .container .card .card-body .btn {
+  color: white;
+  font-weight: 400;
   background-color: orange;
-  width: 40%;
-  margin-left: 6%;
-  padding: 1%;
-  border-radius: 15px;
-  float: left;
-  border: 1px solid gray;
-  margin-bottom: 50px;
-}
-
-.articlesSection .article img {
-  width: 100%;
-  height: 250px;
-}
-
-.articlesSection .article .article_heading {
-  font-size: 22px;
-  text-align: center;
-  padding: 2px;
-  margin-bottom: 10px;
 }
 
 .addArticle form {
@@ -303,6 +330,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .addArticle form input.form_submit:hover {
   color: #d4a91e;
+}
+
+footer {
+  width: 80%;
+  height: 150px;
+  margin: 0 auto;
+  background-color: black;
 }
 
 /*login Page STYLES*/
