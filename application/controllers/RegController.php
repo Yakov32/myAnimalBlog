@@ -1,34 +1,45 @@
 <?php
 	class RegController extends Controller{
 		
-		protected $modelName = 'UsersModel';
-		protected $pageData = array("title" => "RegAuthPage");
+		public $a = 5;
+		protected $pageData = array();
 	
-		public function index(){
-			$this->View->render('RegAuthView',['title' => 'RegAuthPage']);
+		public function index()
+		{
+			$model = new ArticlesModel;
+			$articles = $model->selectSomeArticles(5);
+
+			$this->pageData['articles'] = $articles;
+
+			$this->View->render('IndexView',$this->pageData);
 		}
 		
-		public function Reg(){
+		public function Reg()
+		{
+			$model = new UsersModel;
+			
+			$login  = filter_var(trim($_POST['regLogin']),  FILTER_SANITIZE_STRING);
+			$pass  = filter_var(trim($_POST['regPassword']),  FILTER_SANITIZE_STRING);
+			$email  = filter_var(trim($_POST['regEmail']),  FILTER_SANITIZE_STRING);
 
-            $login  = filter_var(trim($_POST['RegLogin']),  FILTER_SANITIZE_STRING);
-			$pass  = filter_var(trim($_POST['RegPass']),  FILTER_SANITIZE_STRING);
-			$email  = filter_var(trim($_POST['RegEmail']),  FILTER_SANITIZE_STRING);
-
+			$auth_key = bin2hex(random_bytes(22));
+			
 			if(empty($login) &&  empty($login) &&  empty($login)){
-				$this->pageData['errorMessage'] = "Please fill all fields";
+				$this->pageData['alertMessage'] = "Please fill all fields";
 			}
 			else {
-				$res = $this->model->registNewUser($login,$pass,$email);
+				$res = $model->registNewUser($login,$pass,$email,$auth_key);
 
 				if($res == true){
-					$this->pageData['errorMessage'] = "Registration compited. Please Sign IN!";	
+					$this->pageData['alertMessage'] = "Registration compited. Please Sign IN!";	
 				}
 				
 				else {
-					$this->pageData['errorMessage'] = "This login already uses. Try another!";
+					$this->pageData['alertMessage'] = "This login already uses. Try another!";
 				}
 			}
-			$this->View->render('RegAuthView',$this->pageData);	
+			
+			$this->View->render('RegPage',$this->pageData);
 		}	
 	} 
  ?>

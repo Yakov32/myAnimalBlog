@@ -6,7 +6,7 @@ class IndexController extends Controller{
 	public function index()
 	{
 		$model = new ArticlesModel;
-		$articles = $model->selectAllArticles();
+		$articles = $model->selectSomeArticles(6);
 
 		$this->pageData['articles'] = $articles;
 
