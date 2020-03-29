@@ -1,14 +1,38 @@
-#homePageContent{
+
+.alert-message{
+    position: absolute;
+    z-index:1;
+    left:15%;
+    
+    .alert-success{
+        
+        margin-bottom:0px;
+        
+        
+    }
+    
+}
+
+.main-content{
     width: 80%;
 	max-width: 80%;
-	margin: 0 auto;
-	min-zoom: 1000px;
-	background-color: #D5B7B7;
+    margin: 0 auto;
+    min-height: 850px;
+    
+    background-color:#faf0cf;
+    display:flex;
+	
     .leftColumn{
-      background-color: #FCEDC5;
       width: 78%;
-      min-height:1000px;
       
+      
+      
+    }
+    .RightColumn{
+        width:22%;
+        background-color:#e8c990;
+        border-top:1px solid orange;
+        
     }
 }
 
@@ -76,6 +100,8 @@
 /*HomePage slider----*/
 
 .slider{
+    position: relative;
+    z-index:0;
     padding: 0px;
     margin-bottom: 100px;
 
@@ -110,35 +136,37 @@
     }
 }
 
-.articlesSection{
-    width: 100%;
-    
-   margin-bottom:100px;
-   background-color: green;
-   clear: both;
+.posts-container{
+    .container{
+        display:flex;
+        flex-wrap: wrap;
+        
+        .card{
+            width:48.5%;
+            border:1px solid black;
+            
+            &:nth-child(even){
+                margin-left:3%;
+            }
+            img{
+                width:100%;
+                height:320px;
+            }
+            .card-body{
+                background-color:#f5f7f7;
 
-   .article{
-        background-color: orange;
-        width:40%;
-        margin-left:6%;
-        padding:1%;
-        border-radius: 15px;
-        float:left;
-        border:1px solid gray;
-        margin-bottom: 50px;
+                .btn{
+                    color:white;
+                    font-weight: 400;
+                    background-color:orange;
+                }
+            }
 
-        img{
-            width:100%;
-            height:250px;
+            
+            
+
         }
-
-        .article_heading {
-            font-size:22px;
-            text-align: center;
-            padding:2px;
-            margin-bottom: 10px;
-        }	
-   }
+    }
 }
 
 .addArticle{
@@ -182,4 +210,12 @@
             }
         }
     }
+}
+
+
+footer{
+    width:80%;
+    height:150px;
+    margin: 0 auto;
+    background-color:black;
 }
