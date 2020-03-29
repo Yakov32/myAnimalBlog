@@ -2,16 +2,17 @@
 
 class UsersModel extends Model{
 
-    public function registNewUser($login,$password,$email){
+    public function registNewUser($login,$password,$email,$auth_key){
             
         $user = $this->getUser($login);
         if($user == false){
             $sql = "INSERT INTO users VALUES
-            (NULL,:login,:password,:email)";
+            (NULL,:login,:password,:email,:auth_key)";
             $stmt = $this->db->prepare($sql);
             $res = $stmt->execute(["login"    => "$login",
-                                    "password" => "$password",
-                                    "email"    => "$email"]);
+                                   "password" => "$password",
+                                   "email"    => "$email",
+                                   "auth_key" => "$auth_key"]);
             return true;   
         } 
          return false;

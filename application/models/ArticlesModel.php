@@ -3,12 +3,23 @@ class ArticlesModel extends Model{
     
     public function selectOneArticle(){}
     
-    public function selectAllArticles(){
+    public function selectAllArticles()
+    {
         $sql = "SELECT * FROM articles";
-        $res = $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
+        $answer = $this->db->query($sql);  
+        $res = $answer->fetchall(PDO::FETCH_ASSOC);
         
         return $res;
-        }
+    }
+    public function selectSomeArticles($count)
+    {
+        $sql = "SELECT * FROM articles LIMIT 0, $count";
+        $query = $this->db->prepare($sql);
+        $query->execute(['count' => $count]);
+        $res = $query->fetchall(PDO::FETCH_ASSOC);
+        
+        return $res;
+    }
 
     public function insertArticle($title,$content,$image)
     {
