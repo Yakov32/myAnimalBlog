@@ -1,7 +1,15 @@
 <?php
 class ArticlesModel extends Model{
     
-    public function selectOneArticle(){}
+    public function selectArticle($article_id)
+    {
+        $sql = "SELECT * FROM articles WHERE id = :article_id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute(['article_id' => $article_id]);
+        
+        $post = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $post;
+    }
     
     public function selectAllArticles()
     {
@@ -15,7 +23,7 @@ class ArticlesModel extends Model{
     {
         $sql = "SELECT * FROM articles LIMIT 0, $count";
         $query = $this->db->prepare($sql);
-        $query->execute(['count' => $count]);
+        $query->execute(['count_art' => "$count"]);
         $res = $query->fetchall(PDO::FETCH_ASSOC);
         
         return $res;
@@ -39,5 +47,3 @@ class ArticlesModel extends Model{
 
     public function deleteArticle(){}
 }
-
-?>

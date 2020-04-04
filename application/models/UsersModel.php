@@ -18,7 +18,8 @@ class UsersModel extends Model{
          return false;
     }
 
-    public function getUser($login){
+    public function getUser($login)
+    {
         $sql = "SELECT login FROM users WHERE login = ?";
         $stmt = $this->db->prepare($sql);
         $res = $stmt->execute([$login]);
@@ -26,5 +27,14 @@ class UsersModel extends Model{
             
         return $user;
     }
+
+    public function verifyUser($login,$pass)
+    {
+        $sql = "SELECT * FROM users WHERE login = :login AND password = :pass";
+        $stmt = $this->db->prepare($sql);
+        $res = $stmt->execute(['login' => $login, 'pass' => $pass]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+      
+        return $user;
+    }
 }
- ?>

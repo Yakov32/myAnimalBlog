@@ -1,13 +1,8 @@
 <?php
-
-	$routes = [];
-
-	$routes['index.php'] = 'IndexController';
-
-	$routes['login'] = 'LoginController';
-
-	$routes['regist'] = 'RegController';
-
-	$routes['post'] = 'PostController';
-
-?>
+return [
+	'index.php'  => 'IndexController',
+	'login'      => 'LoginController',
+	'regist'	 => 'RegController',
+	'post'		 => 'PostController',
+	'my-profile' => 'ProfileController'
+];

@@ -6,11 +6,10 @@ class IndexController extends Controller{
 	public function index()
 	{
 		$model = new ArticlesModel;
-		$articles = $model->selectSomeArticles(6);
+		$articles = $model->selectSomeArticles(4);
 
 		$this->pageData['articles'] = $articles;
 
 		$this->View->render('IndexView',$this->pageData);
 	}
 } 
- ?>

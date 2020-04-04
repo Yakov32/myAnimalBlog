@@ -1,9 +1,5 @@
 <?php
 	class Controller{
-		
-		protected $modelName;
-		protected $model;
-		
 		protected $view;
 		protected $pageData = [];
 

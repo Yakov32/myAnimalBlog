@@ -31,15 +31,17 @@
 				$res = $model->registNewUser($login,$pass,$email,$auth_key);
 
 				if($res == true){
-					$this->pageData['alertMessage'] = "Registration compited. Please Sign IN!";	
+					//$this->pageData['alertMessage'] = "Registration compited. Please Sign IN!";
+					Core::$components['SessionServ']->setFlash('Registration compited. Please Sign IN!');
+						
 				}
 				
 				else {
-					$this->pageData['alertMessage'] = "This login already uses. Try another!";
+					//$this->pageData['alertMessage'] = "This login already uses. Try another!";
+					Core::$components['SessionServ']->setFlash('This login already uses. Try another!');	
 				}
 			}
 			
-			$this->View->render('RegPage',$this->pageData);
+			header('Location: /');
 		}	
 	} 
- ?>

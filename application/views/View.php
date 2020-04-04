@@ -1,15 +1,11 @@
 <?php
-
-    class View{
-        protected $viewsPath = "./application/views/";
+class View{
+    protected $viewsPath = "./application/views/";
         
-        public function render($tpl,$pageData = null){
+    public function render($tpl,$pageData = null)
+    { 
+        $ViewFullPath = $this->viewsPath . $tpl . ".php";
             
-            $ViewFullPath = $this->viewsPath . $tpl . ".php";
-            
-           
-                require_once $ViewFullPath;
-            
-        }
+        require_once $ViewFullPath; 
     }
-?>
+ }
