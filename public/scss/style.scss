@@ -4,8 +4,13 @@
 @import "blocksStyles/_header.scss";
 
 
-/*Home Page STYLES*/
-@import "_homePage.scss";
+
+//AllContent with pages;
+@import "_content.scss";
+
+
+
+
 
 /*login Page STYLES*/
 @import "_loginPage.scss";

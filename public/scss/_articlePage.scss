@@ -1,0 +1,31 @@
+img{
+    width:80%;
+    margin:15px 10%;
+    align-items: center;
+    display: inline;
+    height: 500px;
+}
+
+
+
+.article-body{
+    
+    width:65%;
+    margin:0 auto;
+
+    h1{
+        text-align: center;
+        font-size:30px;
+        color:orange;
+    }
+        
+    p{ 
+        min-height:200px;
+        text-align: left;
+        
+        font-size:16px;
+        background-color:#fafafa;
+        color:#4d4d4d;
+        font-weight: 500;
+    }
+}

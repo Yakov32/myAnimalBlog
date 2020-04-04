@@ -15,8 +15,7 @@ $(document).ready( function()
         
         if(login.length < 6){
             errorMessage.text('Min length of login is 6!');
-            event.preventDefault();
-               
+            event.preventDefault();   
         }
 
         else if(pass.length < 5){

@@ -74,51 +74,85 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 /*blockHeader*/
-.navbar {
+header .navbar {
   width: 80%;
   min-height: 60px;
   margin: 0 auto;
 }
 
-.navbar .navbar-brand {
+header .navbar .navbar-brand {
   color: white;
 }
 
-.navbar .navbar-menu .nav-item {
+header .navbar .navbar-menu .nav-item {
   font-size: 19px;
   padding-left: 55px;
 }
 
-.navbar .navbar-menu .nav-item a:hover {
+header .navbar .navbar-menu .nav-item a:hover {
   color: #F5DDAB;
 }
 
-.navbar .navbar-search-form {
+header .navbar .navbar-search-form {
   padding-right: 2px;
 }
 
-.navbar .nav-regauth {
+header .navbar .nav-user {
+  width: 320px;
+  padding-left: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .navbar .nav-user p {
+  font-size: 18px;
+  color: orange;
+  text-align: center;
+}
+
+header .navbar .nav-user img {
+  padding: 3px;
+  width: 50px;
+  heigh: 50px;
+  border-radius: 50%;
+}
+
+header .navbar .nav-regauth {
   width: 24.2%;
 }
 
-.navbar .nav-regauth .nav-item {
+header .navbar .nav-regauth .nav-item {
   margin-left: 50px;
   font-size: 20px;
   border: 1px solid orange;
   border-radius: 5px;
 }
 
-.navbar .nav-regauth .nav-item a:hover {
+header .navbar .nav-regauth .nav-item a:hover {
   color: #FFA200;
   font-weight: bold;
 }
 
-#signInModal .modal-title {
+header .alert-message {
+  position: absolute;
+  z-index: 1;
+  left: 15%;
+}
+
+header .alert-message .alert-success {
+  margin-bottom: 0px;
+}
+
+.reg_auth .modal-title {
   font-size: 30px;
   color: orange;
 }
 
-#signInModal .modal-body form input {
+.reg_auth .modal-body form input {
   font-family: "Roboto", sans-serif;
   outline: 1;
   color: orange;
@@ -131,13 +165,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
 }
 
-#signInModal .modal-body form .reg_errorMessage {
+.reg_auth .modal-body form .reg_errorMessage {
   color: #bf1330;
   font-size: 15px;
   font-weight: bold;
 }
 
-#signInModal .modal-body form .btn {
+.reg_auth .modal-body form .btn {
   font-size: 22px;
   text-transform: uppercase;
   outline: 1;
@@ -149,17 +183,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0px;
   color: white;
   cursor: pointer;
-}
-
-/*Home Page STYLES*/
-.alert-message {
-  position: absolute;
-  z-index: 1;
-  left: 15%;
-}
-
-.alert-message .alert-success {
-  margin-bottom: 0px;
 }
 
 .main-content {
@@ -177,56 +200,79 @@ h1, h2, h3, h4, h5, h6 {
   width: 78%;
 }
 
-.main-content .RightColumn {
-  width: 22%;
-  background-color: #e8c990;
-  border-top: 1px solid orange;
+.main-content .leftColumn .content {
+  height: 100%;
+  width: 100%;
 }
 
-.clear {
-  clear: both;
+.main-content .leftColumn .home-page-content {
+  /* Слайдер запущен */
+  /* Слайдер с точками */
+  /* Ограничивающая оболочка */
+  /* Лента слайдов */
+  /* Слайд */
+  /* Слайд активный (показывается) */
+  /* Слайд основной */
+  /* Слайд по центру */
+  /* Клонированный слайд */
+  /* Стрелка */
+  /* Стрелка влево */
+  /* Стрелка вправо */
+  /* Стрелка не активная */
+  /* Точки (булиты) */
+  /* Активная точка */
+  /* Элемент точки */
+  /*HomePage slider----*/
 }
 
-/* Слайдер запущен */
-/* Слайдер с точками */
-/* Ограничивающая оболочка */
-.slick-list {
-  overflow: hidden;
-}
-
-/* Лента слайдов */
-.slick-track {
+.main-content .leftColumn .home-page-content .main-content {
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+  min-height: 850px;
+  background-color: #faf0cf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* Слайд */
-/* Слайд активный (показывается) */
-/* Слайд основной */
-/* Слайд по центру */
-/* Клонированный слайд */
-/* Стрелка */
-/* Стрелка влево */
-/* Стрелка вправо */
-/* Стрелка не активная */
-/* Точки (булиты) */
-/* Активная точка */
-/* Элемент точки */
-/*HomePage slider----*/
-.slider {
+.main-content .leftColumn .home-page-content .main-content .leftColumn {
+  width: 78%;
+}
+
+.main-content .leftColumn .home-page-content .main-content .RightColumn {
+  width: 22%;
+  background-color: #e8c990;
+  border-top: 1px solid orange;
+}
+
+.main-content .leftColumn .home-page-content .clear {
+  clear: both;
+}
+
+.main-content .leftColumn .home-page-content .slick-list {
+  overflow: hidden;
+}
+
+.main-content .leftColumn .home-page-content .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-content .leftColumn .home-page-content .slider {
   position: relative;
   z-index: 0;
   padding: 0px;
   margin-bottom: 100px;
 }
 
-.slider img {
+.main-content .leftColumn .home-page-content .slider img {
   height: 650px;
   width: 100%;
 }
 
-.slider .slick-dots {
+.main-content .leftColumn .home-page-content .slider .slick-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,12 +285,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 12px;
 }
 
-.slider .slick-dots li {
+.main-content .leftColumn .home-page-content .slider .slick-dots li {
   list-style: none;
   margin: 0px 10px;
 }
 
-.slider .slick-dots li button {
+.main-content .leftColumn .home-page-content .slider .slick-dots li button {
   font-size: 0;
   width: 10px;
   height: 10px;
@@ -255,11 +301,11 @@ h1, h2, h3, h4, h5, h6 {
           align-items: center;
 }
 
-.slider .slick-dots li.slick-active button {
+.main-content .leftColumn .home-page-content .slider .slick-dots li.slick-active button {
   background-color: #3A2C05;
 }
 
-.posts-container .container {
+.main-content .leftColumn .home-page-content .posts-container .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,31 +313,31 @@ h1, h2, h3, h4, h5, h6 {
       flex-wrap: wrap;
 }
 
-.posts-container .container .card {
+.main-content .leftColumn .home-page-content .posts-container .container .card {
   width: 48.5%;
   border: 1px solid black;
 }
 
-.posts-container .container .card:nth-child(even) {
+.main-content .leftColumn .home-page-content .posts-container .container .card:nth-child(even) {
   margin-left: 3%;
 }
 
-.posts-container .container .card img {
+.main-content .leftColumn .home-page-content .posts-container .container .card img {
   width: 100%;
   height: 320px;
 }
 
-.posts-container .container .card .card-body {
+.main-content .leftColumn .home-page-content .posts-container .container .card .card-body {
   background-color: #f5f7f7;
 }
 
-.posts-container .container .card .card-body .btn {
+.main-content .leftColumn .home-page-content .posts-container .container .card .card-body .btn {
   color: white;
   font-weight: 400;
   background-color: orange;
 }
 
-.addArticle form {
+.main-content .leftColumn .home-page-content .addArticle form {
   background: #F47C1B;
   max-width: 360px;
   margin: 0 auto 100px;
@@ -300,7 +346,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
 }
 
-.addArticle form input {
+.main-content .leftColumn .home-page-content .addArticle form input {
   font-family: "Roboto", sans-serif;
   outline: 1;
   background: white;
@@ -314,7 +360,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
 }
 
-.addArticle form input.form_submit {
+.main-content .leftColumn .home-page-content .addArticle form input.form_submit {
   font-size: 22px;
   text-transform: uppercase;
   outline: 1;
@@ -328,15 +374,50 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-.addArticle form input.form_submit:hover {
+.main-content .leftColumn .home-page-content .addArticle form input.form_submit:hover {
   color: #d4a91e;
 }
 
-footer {
+.main-content .leftColumn .home-page-content footer {
   width: 80%;
   height: 150px;
   margin: 0 auto;
   background-color: black;
+}
+
+.main-content .leftColumn .content-article-page img {
+  width: 80%;
+  margin: 15px 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: inline;
+  height: 500px;
+}
+
+.main-content .leftColumn .content-article-page .article-body {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.main-content .leftColumn .content-article-page .article-body h1 {
+  text-align: center;
+  font-size: 30px;
+  color: orange;
+}
+
+.main-content .leftColumn .content-article-page .article-body p {
+  min-height: 200px;
+  text-align: left;
+  font-size: 16px;
+  background-color: #fafafa;
+  color: #4d4d4d;
+  font-weight: 500;
+}
+
+.main-content .RightColumn {
+  width: 22%;
+  background-color: orange;
 }
 
 /*login Page STYLES*/

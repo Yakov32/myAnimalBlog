@@ -1,0 +1,33 @@
+.main-content{
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+     min-height: 850px;      
+    background-color:#faf0cf;
+    display:flex;
+    
+    .leftColumn{
+            width: 78%;
+        
+            //У контент-страницы 2 класса, 1 общий(content) и 2-й страничный.
+        .content{
+            height: 100%;
+            width:  100%;
+        }
+
+        .home-page-content{
+            @import "_homePage.scss";
+        }
+
+        .content-article-page{
+            
+            @import "_articlePage.scss";
+        }
+    }
+    
+    .RightColumn{
+        width:22%;
+        background-color:orange;
+
+    }
+}
